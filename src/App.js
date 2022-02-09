@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DefaultAutoComplete from "./components/DefaultAutoComplete";
+import "./App.css";
+import "devextreme/dist/css/dx.light.css";
+import MultiSelect from "./components/MultiSelect";
+import TemplateAutoComplete from "./components/TemplateAutoComplete/TemplateAutoComplete";
+import DevExDefaultAutoComplete from "./components/DevExDefaultAutoComplete";
+import DevEXCustomizedAutoComplete from "./components/DevEXCustomizedAutoComplete";
+import SfCustomAc from "./components/SfCustomAc";
+import SfChipAc from "./components/SfChipAc";
+import SfSelectAll from "./components/SfSelectAll";
+import SfGridAc from "./components/SfGridAc";
+import DevExMultiSelect from "./components/DevExMultiSelect";
+import DevExGridSelection from "./components/DevExGridSelection";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <h1 style={{ textAlign: "center", marginTop: "0px" }}>
+        SyncFusion vs DevExtreme AutoComplete
+      </h1> */}
+      <div style={{ float: "left", width: "300px" }}>
+        <span>SyncFusion AutoComplete</span>
+        <DefaultAutoComplete />
+        <MultiSelect />
+        <TemplateAutoComplete />
+        <SfCustomAc />
+        <SfChipAc />
+        <SfSelectAll />
+        <SfGridAc />
+      </div>
+      <div style={{ float: "right", width: "500px" }}>
+        <span>DevExtreme AutoComplete</span>
+        <DevExDefaultAutoComplete />
+        <DevEXCustomizedAutoComplete />
+        <DevExMultiSelect />
+        <DevExGridSelection />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
